@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARISMART | Registro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets-css/register.css">
+</head>
+<body>
+    <!-- Fondo animado con ondas -->
+    <div class="wave-background">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="shine"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <div class="auth-card">
+            <div class="logo-container">
+                <img src="../assets-images/logosolotransparente.png" alt="WARISMART Logo" class="logo-img">
+            </div>
+            <h2>Crear Cuenta</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="reg-nombre">Nombre</label>
+                    <input type="text" id="reg-nombre" name="nombre" placeholder="Tu nombre" required>
+                    <span class="error-message" id="reg-nombreError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="reg-apellido">Apellido</label>
+                    <input type="text" id="reg-apellido" name="apellido" placeholder="Tu apellido" required>
+                    <span class="error-message" id="reg-apellidoError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="reg-correo">Correo Electrónico</label>
+                    <input type="email" id="reg-correo" name="correo" placeholder="tu.correo@ejemplo.com" required>
+                    <span class="error-message" id="reg-correoError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="reg-contrasena">Contraseña</label>
+                    <input type="password" id="reg-contrasena" name="contrasena" placeholder="Mínimo 8 caracteres" required minlength="8">
+                    <span class="error-message" id="reg-contrasenaError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="reg-confirmar-contrasena">Confirmar Contraseña</label>
+                    <input type="password" id="reg-confirmar-contrasena" name="confirmar-contrasena" placeholder="Confirma tu contraseña" required minlength="8">
+                    <span class="error-message" id="reg-confirmar-contrasenaError"></span>
+                </div>
+                <button type="submit" class="btn-primary">Registrarse</button>
+                <p class="link-text">¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a></p>
+                <div id="formMessage" class="form-message" role="alert" aria-live="polite"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Tarjeta de éxito -->
+    <div class="success-card" id="successCard">
+        <h3>¡Registro Exitoso!</h3>
+        <p>Tu cuenta ha sido creada correctamente. Ahora podrás disfrutar de todos los beneficios de WARISMART.</p>
+        <button class="btn-ok" onclick="redirectToLogin()">Iniciar Sesión</button>
+    </div>
+
+    <script src="../assets-js/landing.js"></script>
+</body>
+</html>
